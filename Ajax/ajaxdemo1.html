@@ -1,0 +1,49 @@
+<head>
+	
+	<title>Ajax-demo 1</title>
+	<meta charset="utf-8">
+
+	<script>
+	
+	var pyynto;
+
+	function alusta_pyynto()
+	{
+		if(window.XMLHttpRequest)
+		{
+			pyynto=new XMLHttpRequest();
+		}
+		else
+		{
+			pyynto=new ActiveXObject("Microsoft.XMLHTTP");
+		}
+	}
+
+	function kasittele_vastaus()
+	{
+		if(pyynto.readyState==4 && pyynto.status==200)
+		{
+			document.getElementById("vastaus").innerHTML=pyynto.responseText;
+		}
+	}
+
+	function suorita_pyynto()
+	{
+		alusta_pyynto();
+		pyynto.onreadystatechange = kasittele_vastaus;
+		var ktunnus=document.getElementById("ktunnus").value;
+		pyynto.open("GET","http://magnesium/15tvpt07a/albert.roschier/Ajax/ajaxdemo1.php?ktunnus=" + ktunnus, true);
+		pyynto.send();
+	}
+	
+	</script>
+
+</head>
+
+<body>
+	<form name='myForm'>
+	Käyttäjätunnus: <input type='text' id='ktunnus' /><br/>
+	<input type='button' onclick='suorita_pyynto()' value='Näytä käyttäjätunnuksen tietoja'/>
+	</form>
+	<p id="vastaus"></p>
+</body>

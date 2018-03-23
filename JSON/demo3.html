@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Demo kolomone</h2>
+
+<p id="demo"></p>
+
+<script>
+	var myObj, myObj2, myJSON, myJSON2, text, text2, obj, obj2; 
+
+	myObj = { "nimi":"Nimi 1", "age":1, "koti":"Koti 1" }; 
+	myObj2 = { "nimi":"Nimi 2", "age":2, "koti":"Koti 2" }
+	myJSON = JSON.stringify(myObj);
+	myJSON2 = JSON.stringify(myObj2);
+	localStorage.setItem("testJSON", myJSON);
+	localStorage.setItem("testJSON2", myJSON2);
+
+	text = localStorage.getItem("testJSON");
+	obj = JSON.parse(text);
+	text2 = localStorage.getItem("testJSON");
+	obj2 = JSON.parse(text2);
+	
+	document.getElementById("demo").innerHTML = myObj.nimi + " & " + myObj2.nimi;
+</script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+{
+  "listanNimi" : "Tredun Mestarit",
+  "kotipaikka" : "Tampere",
+  "muodostettu" : 2017,
+  "kerhotila" : "Tredu",
+  "aktiivinen" : true,
+  "jasenet" : [
+  
+    {
+      "nimi" : "Jere",
+      "ika" : 18,
+      "lempinimi" : "JeJy",
+      "vahvuudet" : [
+        "Koulusta ulos lentäminen"
+      ]
+    },
+	{
+      "nimi" : "Jesse",
+      "ika" : 18,
+      "lempinimi" : "Jese",
+      "vahvuudet" : [
+        "Koulusta ulos lentäminen"
+      ]
+    }
+	
+  ]
+}

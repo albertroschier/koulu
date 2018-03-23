@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Demo kakone</h2>
+
+<p id="demo"></p>
+
+<script>
+	var myJSON = '{ "nimi":"Nimi", "ika":1, "koti":"Koti" }';
+	var myObj = JSON.parse(myJSON);
+	document.getElementById("demo").innerHTML = myObj.nimi;
+</script>
+
+</body>
+</html>
