@@ -1,2 +1,2 @@
 # koulu
-Testing Node, Ajax and JSON.
+Testing Node, JSON and Ajax.
